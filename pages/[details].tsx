@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { useQuery, gql } from "@apollo/client";
 import { useRouter } from "next/dist/client/router";
+import styles from '../styles/index.module.css';
 
 interface List {
   name: string;
@@ -50,11 +51,11 @@ const Details = () => {
     <Fragment>
       <div className="w3-container">
         <div className="w3-display-container">
-          <div className="w3-display-middle">
+          <div className={`w3-display-middle ${styles.details}`}>
             {data &&
               data.allPeople.people.map((res, ind) => {
                 return (
-                  <div key={res.homeworld.id}>
+                  <div key={ind}>
                     {name === res.name ? (
                       <div className="w3-card">
                         <div className="w3-center">
