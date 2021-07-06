@@ -1,9 +1,17 @@
-.details{
-    height: 300px;
-    margin-top: 400px!important;
-    width: 400px;
+.details {
+  height: 300px;
+  margin-top: 400px !important;
+  width: 400px;
 }
 
-.index{
-    background-image: linear-gradient(to right, white 80%, lightblue);;
+.index {
+  background-image: linear-gradient(to right, white 80%, lightblue);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .details {
+        height: 300px;
+        margin-top: 200px !important;
+        width: 400px;
+      }
 }
