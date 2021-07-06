@@ -56,8 +56,6 @@ const Details = () => {
             {data &&
               data.allPeople.people.map((res, ind) => {
                 if(name === res.name){
-                    console.log(res);
-                    
                     return (
                         <div key={ind}>
                           <div className="w3-card">
