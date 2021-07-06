@@ -45,7 +45,7 @@ const Details = () => {
   const { data } = useQuery<AllPeopleDetails>(query);
 
   const router = useRouter();
-  let name: string = router.query.details;
+  let name: any = router.query.details;
   console.log(name);
   
 
