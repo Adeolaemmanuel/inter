@@ -52,7 +52,7 @@ const Details = () => {
     <Fragment>
       <div className="w3-container">
         <div className="w3-display-container">
-          <div className={`w3-display-middle ${styles.details}`}>
+          <div className={`w3-display-middle ${styles.details} w3-container`}>
             {data &&
               data.allPeople.people.map((res, ind) => {
                 if(name === res.name){
