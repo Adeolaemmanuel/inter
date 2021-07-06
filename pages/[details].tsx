@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { useQuery, gql } from "@apollo/client";
 import { useRouter } from "next/dist/client/router";
 import styles from '../styles/index.module.css';
+import Head from "next/head";
 
 interface List {
   name: string;
@@ -50,6 +51,9 @@ const Details = () => {
 
   return (
     <Fragment>
+        <Head>
+            <title>{name}</title>
+        </Head>
       <div className="w3-container">
         <div className="w3-display-container">
           <div className={`w3-display-middle ${styles.details} w3-container`}>
