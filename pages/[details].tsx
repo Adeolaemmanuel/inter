@@ -46,7 +46,6 @@ const Details = () => {
 
   const router = useRouter();
   let name: any = router.query.details;
-  console.log(name);
   
 
   return (
