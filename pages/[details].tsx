@@ -63,11 +63,11 @@ const Details = () => {
                         <div key={ind}>
                           <div className="w3-card">
                               <div className="w3-center">
-                                <p className="w3-padding">{res.name}</p>
-                                <p className='w3-padding'>{res.homeworld.name}</p>
-                                <p className='w3-padding'>{res.homeworld.gravity}</p>
-                                <p className='w3-padding'>{res.homeworld.population}</p>
-                                <p className='w3-padding'>{res.homeworld.diameter}</p>
+                                <p className="w3-padding"><span className='w3-padding w3-bold'>Person name:</span> {res.name}</p>
+                                <p className='w3-padding'><span className='w3-padding w3-bold'>Home world name:</span>{res.homeworld.name}</p>
+                                <p className='w3-padding'><span className='w3-padding w3-bold'>Home world gravity:</span>{res.homeworld.gravity}</p>
+                                <p className='w3-padding'><span className='w3-padding w3-bold'>Home world population:</span>{res.homeworld.population}</p>
+                                <p className='w3-padding'><span className='w3-padding w3-bold'>Home world diameter:</span>{res.homeworld.diameter}</p>
                               </div>
                             </div>
                         </div>
