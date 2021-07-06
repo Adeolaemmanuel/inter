@@ -45,7 +45,9 @@ const Details = () => {
   const { data } = useQuery<AllPeopleDetails>(query);
 
   const router = useRouter();
-  let name: any = router.query;
+  let name: string = router.query.details;
+  console.log(name);
+  
 
   return (
     <Fragment>
@@ -54,23 +56,23 @@ const Details = () => {
           <div className={`w3-display-middle ${styles.details}`}>
             {data &&
               data.allPeople.people.map((res, ind) => {
-                return (
-                  <div key={ind}>
-                    {name === res.name ? (
-                      <div className="w3-card">
-                        <div className="w3-center">
-                          <p className="w3-padding">{res.name}</p>
-                          <p className='w3-padding'>{res.homeworld.name}</p>
-                          <p className='w3-padding'>{res.homeworld.gravity}</p>
-                          <p className='w3-padding'>{res.homeworld.population}</p>
-                          <p className='w3-padding'>{res.homeworld.diameter}</p>
+                if(name === res.name){
+                    console.log(res);
+                    
+                    return (
+                        <div key={ind}>
+                          <div className="w3-card">
+                              <div className="w3-center">
+                                <p className="w3-padding">{res.name}</p>
+                                <p className='w3-padding'>{res.homeworld.name}</p>
+                                <p className='w3-padding'>{res.homeworld.gravity}</p>
+                                <p className='w3-padding'>{res.homeworld.population}</p>
+                                <p className='w3-padding'>{res.homeworld.diameter}</p>
+                              </div>
+                            </div>
                         </div>
-                      </div>
-                    ) : (
-                      ""
-                    )}
-                  </div>
-                );
+                      );
+                }
               })}
           </div>
         </div>
