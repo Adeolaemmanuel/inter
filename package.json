@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.20",
+    "@nestjs/graphql": "^7.11.0",
+    "apollo-server-express": "^2.25.2",
+    "graphql": "^15.5.1",
+    "graphql-tools": "^7.0.5",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
