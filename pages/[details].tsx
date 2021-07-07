@@ -3,6 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 import { useRouter } from "next/dist/client/router";
 import styles from '../styles/index.module.css';
 import Head from "next/head";
+import RowHalf from "../components/Index/RowHalf";
 
 interface List {
   name: string;
@@ -64,11 +65,12 @@ const Details = () => {
                         <div key={ind}>
                           <div className="w3-card">
                               <div className="w3-center">
-                                <p className="w3-padding"><span className='w3-padding w3-bold'>Person name:</span> {res.name}</p>
-                                <p className='w3-padding'><span className='w3-padding w3-bold'>Home world name:</span>{res.homeworld.name}</p>
-                                <p className='w3-padding'><span className='w3-padding w3-bold'>Home world gravity:</span>{res.homeworld.gravity}</p>
-                                <p className='w3-padding'><span className='w3-padding w3-bold'>Home world population:</span>{res.homeworld.population}</p>
-                                <p className='w3-padding'><span className='w3-padding w3-bold'>Home world diameter:</span>{res.homeworld.diameter}</p>
+                                <p className="w3-padding w3-panel w3-margin-top w3-black">{res.name}</p>
+                                <RowHalf name='Gender' data={res.gender.toUpperCase()} />
+                                <RowHalf name='Home world name' data={res.homeworld.name} />
+                                <RowHalf name='Home world gravity' data={res.homeworld.gravity} />
+                                <RowHalf name='Home world population' data={res.homeworld.population} />
+                                <RowHalf name='Home world diameter' data={res.homeworld.diameter} />
                               </div>
                             </div>
                         </div>
