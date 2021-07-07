@@ -56,7 +56,7 @@ const List = () => {
                       <div className="w3-col s7 m9 l9">
                         <h3 className="w3-bold w3-padding">{res.name}</h3>
                         <div className="w3-row">
-                          <div className="w3-col s1 m1 l1">
+                          <div className="w3-col s6 m1 l1">
                             {res.gender === "male" ? (
                               <Image
                                 src="/assets/img/profile.svg"
